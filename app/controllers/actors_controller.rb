@@ -6,6 +6,7 @@ class ActorsController < ApplicationController
   end
 
   def show
+    @casting = Casting.new
     @actor = Actor.find(params[:id])
 
     render("actors/show.html.erb")
