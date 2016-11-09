@@ -1,6 +1,10 @@
 class Actor < ApplicationRecord
   # Direct associations
 
+  has_many   :characters,
+             :class_name => "Casting",
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
