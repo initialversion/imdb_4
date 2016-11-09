@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root :to => "movies#index"
   # Routes for the Casting resource:
   # CREATE
