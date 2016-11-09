@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Casting resource:
+  # CREATE
+  get "/castings/new", :controller => "castings", :action => "new"
+  post "/create_casting", :controller => "castings", :action => "create"
+
+  # READ
+  get "/castings", :controller => "castings", :action => "index"
+  get "/castings/:id", :controller => "castings", :action => "show"
+
+  # UPDATE
+  get "/castings/:id/edit", :controller => "castings", :action => "edit"
+  post "/update_casting/:id", :controller => "castings", :action => "update"
+
+  # DELETE
+  get "/delete_casting/:id", :controller => "castings", :action => "destroy"
+  #------------------------------
+
   # Routes for the Actor resource:
   # CREATE
   get "/actors/new", :controller => "actors", :action => "new"

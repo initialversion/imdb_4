@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Casting #<%= @casting.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Movie</dt>
+      <dd><%= @casting.movie_id %></dd>
+
+      <dt>Actor</dt>
+      <dd><%= @casting.actor_id %></dd>
+
+      <dt>Character name</dt>
+      <dd><%= @casting.character_name %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/castings" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/castings/<%= @casting.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_casting/<%= @casting.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
